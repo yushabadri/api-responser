@@ -2,27 +2,10 @@
 
 namespace Yusha\ApiResponser\Services;
 
-use Illuminate\Http\JsonResponse;
-
-
 class ResponseHandlerService
 {
-    /**
-     * Handle error responses.
-     *
-     * @param int|null $statusCode
-     * @param array  $data
-     * @param string $message
-     *
-     * @return JsonResponse
-     */
-    public static function handle($statusCode = null, $data = [], $message = '')
+    public static function handle($statusCode, $data = [], $message = '')
     {
-        if ($statusCode === null) {
-            // Determine status from the response header
-            $statusCode = response()->getStatusCode();
-        }
-
         $status = self::getStatusFromCode($statusCode);
 
         return response()->json([

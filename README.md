@@ -12,22 +12,18 @@ composer require yusha/api-responser
 
 ## Usage
 
-### Using the ApiResponseTrait
+### Using the handle Method
 
-To use the `ApiResponseTrait` in your controllers or other classes, simply include the trait and call the `responseHandler` method:
+To use the `ResponseHandlerService` in your controllers or other classes, simply call the `handle` method:
 
 ```php
-use App\Http\Controllers\Controller;
-use App\Http\Traits\ApiResponseTrait;
-use Illuminate\Http\Response;
+use Yusha\ApiResponder\Services\ResponseHandlerService;
 
 class SomeController extends Controller
 {
-    use ApiResponseTrait;
-
     public function someMethod()
     {
-        return $this->responseHandler()->handle(Response::HTTP_OK, $data, 'Data successfully returned.');
+        return ResponseHandlerService::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
     }
 }
 ```
@@ -43,7 +39,7 @@ The handle method accepts three parameters:
 Here's an example of how you can use the handle method:
 
 ```
-return $this->responseHandler()->handle(Response::HTTP_OK, $data, 'Data successfully returned.');
+   return ResponseHandlerService::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
 ```
 
 In this example, the handle method is used to create a JSON response with a status code of 200 (OK), the $propertiesData as the data, and the message 'Properties data successfully returned.'.
