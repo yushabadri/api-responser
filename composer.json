@@ -1,5 +1,6 @@
 {
     "name": "yusha/api-responser",
+    "minimum-stability": "stable",
     "description": "Laravel API Responser simplifies API response handling in Laravel. Format, manipulate, and customize your responses effortlessly, reducing repetitive code and improving response consistency",
     "license": "MIT",
     "autoload": {

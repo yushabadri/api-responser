@@ -2,7 +2,7 @@
 
 namespace App\Http\Traits;
 
-use Yusha\ApiResponder\Services\ResponseHandlerService;
+use Yusha\ApiResponser\Services\ResponseHandlerService;
 
 trait ApiResponseTrait
 {
