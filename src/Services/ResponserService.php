@@ -2,7 +2,7 @@
 
 namespace Yusha\ApiResponser\Services;
 
-class ResponseHandlerService
+class Responser
 {
     public static function handle($statusCode, $data = [], $message = '')
     {
