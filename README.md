@@ -14,16 +14,16 @@ composer require yusha/api-responser
 
 ### Using the handle Method
 
-To use the `ResponseHandlerService` in your controllers or other classes, simply call the `handle` method:
+To use the `Responser` in your controllers or other classes, simply call the `handle` method:
 
 ```php
-use Yusha\ApiResponder\Services\ResponseHandlerService;
+use Yusha\ApiResponder\Services\Responser;
 
 class SomeController extends Controller
 {
     public function someMethod()
     {
-        return ResponseHandlerService::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
+        return Responser::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
     }
 }
 ```
@@ -39,7 +39,7 @@ The handle method accepts three parameters:
 Here's an example of how you can use the handle method:
 
 ```
-   return ResponseHandlerService::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
+   return Responser::handle(Response::HTTP_OK, $data, 'Data successfully returned.');
 ```
 
 In this example, the handle method is used to create a JSON response with a status code of 200 (OK), the $propertiesData as the data, and the message 'Properties data successfully returned.'.
@@ -47,7 +47,7 @@ In this example, the handle method is used to create a JSON response with a stat
 
 ### Customization
 
-You can customize the behavior of the `ResponseHandlerService` by extending it and overriding its methods in your own class.
+You can customize the behavior of the `Responser` by extending it and overriding its methods in your own class.
 
 ## Configuration
 
