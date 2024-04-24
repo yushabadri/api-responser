@@ -1,6 +1,6 @@
 <?php
 
-namespace Yusha\ApiResponder\Services;
+namespace Yusha\ApiResponser\Services;
 
 use Illuminate\Http\JsonResponse;
 
